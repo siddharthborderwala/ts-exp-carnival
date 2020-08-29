@@ -1,0 +1,27 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "TS integration with Express",
+	"main": "index.js",
+	"private": "true",
+	"scripts": {
+		"start:build": "tsc -w",
+		"start:run": "nodemon ./build",
+		"start": "concurrently npm:start:*"
+	},
+	"author": "Siddharth Borderwala",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^5.3.0",
+		"nodemon": "^2.0.4"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cookie-session": "^1.4.0",
+		"express": "^4.17.1"
+	},
+	"engines": {
+		"node": "12.18.3",
+		"npm": "6.14.8"
+	}
+}
