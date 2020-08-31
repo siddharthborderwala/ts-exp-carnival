@@ -19,9 +19,6 @@ class LoginController {
 	postLogin(req: Request, res: Response): void {
 		const { email, password } = req.body;
 
-		if (!email) res.status(401).send('Please provide an email.');
-		if (!password) res.status(403).send('Password required');
-
 		if (email === 'hi@hi.com' && password === 'myPassword') {
 			req.session = { loggedIn: true };
 			res.redirect('/');
